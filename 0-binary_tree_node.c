@@ -24,10 +24,12 @@ return (NULL);
 
 new_child = parent;
 
-if (new_child->left == NULL)
-new_child = new_child->left;
-else
-new_child = new_child->right;
+    if (new_child->left == NULL)
+        new_child = new_child->left;
+    else if (new_child->right == NULL)
+        new_child = new_child->right;
+    else
+    return (NULL);
 
 new_child->n = value;
 
