@@ -21,14 +21,14 @@ if (parent->left == NULL)
 {
 parent->left = malloc(sizeof(binary_tree_t));
 if (parent->left == NULL)
-return (NULL):
+return (NULL);
 parent->left->n = value;
 }
 else if (parent->right == NULL)
 {
 parent->right = malloc(sizeof(binary_tree_t));
 if (parent->right == NULL)
-return (NULL):
+return (NULL);
 parent->right->n = value;
 }
 else
