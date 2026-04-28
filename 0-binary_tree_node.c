@@ -22,6 +22,6 @@ return (NULL);
 child->n = value;
 child->left = NULL;
 child->right = NULL;
-
+child->parent = parent;
 return (child);
 }
