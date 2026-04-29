@@ -18,9 +18,15 @@ return;
 }
 
 if (tree->left != NULL)
+{
 binary_tree_delete(tree->left);
-
-if (tree->right != NULL)
-binary_tree_delete(tree->right);
+continue;
 }
+if (tree->right != NULL)
+{
+binary_tree_delete(tree->right);
+continue;
+}
+}
+
 }
