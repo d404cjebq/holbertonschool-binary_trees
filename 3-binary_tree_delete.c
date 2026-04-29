@@ -8,25 +8,13 @@
  */
 void binary_tree_delete(binary_tree_t *tree)
 {
-while (tree)
-{
-
-if (tree->left == NULL && tree->right == NULL)
-{
-free(tree);
+if (tree == NULL)
 return;
-}
 
-if (tree->left != NULL)
-{
 binary_tree_delete(tree->left);
-continue;
-}
-if (tree->right != NULL)
-{
+
 binary_tree_delete(tree->right);
-continue;
-}
-}
+
+free(tree);
 
 }
