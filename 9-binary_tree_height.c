@@ -14,22 +14,14 @@
  */
 size_t binary_tree_height(const binary_tree_t *tree)
 {
-size_t L = 0, R = 0;
-binary_tree_t tmp;
+size_t L;
+size_t R ;
 if (tree == NULL)
 return (0);
-tmp = tree;
-while (tmp)
-{
-L = tmp->left ?  ++L : L ;
-tmp = tmp->left;
-}
-tmp = tree;
-while (tmp)
-{
-R = tmp->right ?  ++R : R ;
-tmp = tmp->right;
-}
-L = L > R ? L : R;
+
+L =(tree->left)?binary_tree_height(tree->left) +1:0;
+R =(tree->right)?binary_tree_height(tree->right) +1:0;
+if (L > R)
 return (L);
+return (R);
 }
